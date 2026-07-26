@@ -1,0 +1,7 @@
+.v0
+.vercel
+.vercel_build_output
+.next
+node_modules
+.env.local
+.DS_Store
