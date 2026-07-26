@@ -79,24 +79,20 @@ body{
   text-overflow:ellipsis;
 }
 
+.thumb.empty{
+  min-height:220px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--muted);
+  font-size:1rem;
+  padding:20px;
+}
+
 .footer{
   padding:20px;
   text-align:center;
   color:var(--muted);
   border-top:1px solid rgba(255,255,255,0.02);
   background:transparent;
-}
-
-/* modal */
-.modal{
-  position:fixed; inset:0; background:rgba(1,2,3,0.7); display:flex; align-items:center; justify-content:center;
-  z-index:60; padding:20px;
-}
-.modalInner{
-  max-width:95%; max-height:95%; position:relative; border-radius:8px; overflow:auto; background:transparent;
-}
-.modalInner img{ max-width:100%; max-height:80vh; display:block; border-radius:6px; margin-bottom:8px; }
-.modalCaption{ color:var(--muted); text-align:center }
-.close{
-  position:absolute; right:10px; top:10px; border:none; background:rgba(0,0,0,0.5); color:var(--text); padding:6px 10px; border-radius:6px; cursor:pointer;
 }
