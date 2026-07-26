@@ -14,7 +14,7 @@ export default function Home() {
 
       // IMPORTANT: For debugging only. This uses a client-visible token.
       const TOKEN = process.env.NEXT_PUBLIC_DROPBOX_TOKEN
-      const SHARED_LINK = process.env.NEXT_PUBLIC_DROPBOX_SHARED_LINK || https://www.dropbox.com/scl/fo/5d2lvg0ht29ojmj6kmp3t/AHAKfa4i-i6yrpjyaWINS2E?rlkey=sk76gcfq7kzby9918w6tae4q9&st=0oglorva&dl=0'
+      const SHARED_LINK = process.env.NEXT_PUBLIC_DROPBOX_SHARED_LINK || 'https://www.dropbox.com/scl/fo/5d2lvg0ht29ojmj6kmp3t/AHAKfa4i-i6yrpjyaWINS2E?rlkey=sk76gcfq7kzby9918w6tae4q9&st=0oglorva&dl=0'
 
       if (!TOKEN) {
         setError('Missing NEXT_PUBLIC_DROPBOX_TOKEN — set this env var for client-side debugging (temporary)')
