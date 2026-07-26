@@ -1,20 +1,23 @@
 // pages/api/photos.js
-// Lists files in a Dropbox shared folder and returns temporary links for JPG/JPEG images.
-// Tries two methods to get a temporary link:
-//  1) Use shared_link + path (works when you provide a shared link URL for the folder)
-//  2) Fall back to using the file id (f.id) without shared_link (works when the token belongs to the owner and has access)
+// Lists files in a Dropbox folder (supports shared link or direct token access) and returns temporary links for JPG/JPEG images.
+// Supports DROPBOX_SHARED_LINK (shared folder link) and DROPBOX_ROOT_PATH (path inside the shared link or account, e.g. '/portfolio').
 
 export default async function handler(req, res) {
   const DROPBOX_TOKEN = process.env.DROPBOX_TOKEN
   const SHARED_LINK = process.env.DROPBOX_SHARED_LINK || ''
+  const ROOT_PATH = process.env.DROPBOX_ROOT_PATH || '' // e.g. '/portfolio' or '/Luff Photo/portfolio'
 
   if (!DROPBOX_TOKEN) {
     return res.status(500).json({ error: 'Missing DROPBOX_TOKEN in environment. Set DROPBOX_TOKEN in Vercel/Env.' })
   }
 
   try {
-    // 1) list folder entries. If you have a shared link for the folder, include it here; otherwise list the root ("")
-    const listBody = SHARED_LINK ? { path: '', shared_link: { url: SHARED_LINK }, recursive: false } : { path: '', recursive: false }
+    // Build list_folder request body. Use ROOT_PATH when provided.
+    const listBody = SHARED_LINK
+      ? { path: ROOT_PATH || '', shared_link: { url: SHARED_LINK }, recursive: false }
+      : { path: ROOT_PATH || '', recursive: false }
+
+    console.log('Listing Dropbox folder', { rootPath: ROOT_PATH, sharedLink: !!SHARED_LINK })
 
     const listResp = await fetch('https://api.dropboxapi.com/2/files/list_folder', {
       method: 'POST',
@@ -41,8 +44,9 @@ export default async function handler(req, res) {
     const photos = []
 
     for (const f of jpgFiles) {
-      // Attempt 1: use the shared_link + path (if SHARED_LINK is provided)
       let got = false
+
+      // Attempt 1: use the shared_link + path (if SHARED_LINK is provided)
       if (SHARED_LINK) {
         try {
           const body = { path: f.path_lower || f.path_display || f.path, shared_link: { url: SHARED_LINK } }
@@ -64,7 +68,6 @@ export default async function handler(req, res) {
             }
           } else {
             const t = await tmpResp.text().catch(() => '')
-            // If the error suggests path not found / lookup failed, we'll try fallback below
             console.warn('get_temporary_link with shared_link failed for', f.path_lower, tmpResp.status, t)
             errors.push({ file: f.name, method: 'shared_link+path', status: tmpResp.status, detail: t })
           }
@@ -106,7 +109,6 @@ export default async function handler(req, res) {
       }
 
       if (!got) {
-        // Neither method succeeded for this file
         errors.push({ file: f.name, message: 'could not obtain temporary link with either shared_link+path or id' })
       }
     }
