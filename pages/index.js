@@ -1,4 +1,4 @@
-⁹import { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export default function Home({ photos = [], errors = [] }) {
   const [modal, setModal] = useState({ open: false, src: '', name: '' })
