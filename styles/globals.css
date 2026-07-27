@@ -33,6 +33,9 @@ body{
   letter-spacing:0.18em;
   margin:0;
 }
+.small-caps {
+  font-variant-caps: small-caps;
+}
 .artist{font-family:'Josefin Sans';font-weight:600;font-size:18px;color:var(--muted);}
 .bio{max-width:780px;color:var(--muted);margin-top:8px}
 
