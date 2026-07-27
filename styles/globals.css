@@ -61,8 +61,8 @@ body{
   .photoCard{flex:0 0 calc(100% - 10px)}
 }
 
-.connect{margin-top:28px;display:grid;flex-direction:column;gap:8px}
-.social{display:grid; gap:6px;margin-top:8px;font-family: 'Josefin Sans';font-weight:300;font-size:22px;margin:0}
+.connect{margin-top:8px;display:grid;flex-direction:column}
+.social{display:grid;gap:6px;margin-top:8px;font-family: 'Josefin Sans';font-weight:300;font-size:22px;margin:0}
 .socialLink{color: var(--muted);text-decoration:none;font-size:16px;}
 
 .errorPanel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:8px;color:var(--muted)}
