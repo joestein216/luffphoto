@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react'
 import { IconInstagram } from './icon_instagram.svg'
 import { IconFacebook } from './icon_facebook.svg'
 import { IconEmail } from './icon_email.svg'
+import { IconWhois } from './icon_whois.svg'
 
 export default function Home({ photos = [], errors = [] }) {
   const [modal, setModal] = useState({ open: false, src: '', name: '' })
@@ -76,13 +77,14 @@ export default function Home({ photos = [], errors = [] }) {
           <h2 className="sectionTitle">Creative Connections</h2>
           <div className="social">
             <div>
-              <a href="#" className="socialLink">@tabbicat on instagram</a>
+              <span><a href="https://www.instagram.com/luffphoto" className="socialLink"><IconInstagram />@luffphoto on instagram</a></span>
             </div>
             <div>
-              <a href="#" className="socialLink">@tabbicat on facebook</a>
+              <span><a href="https://www..facebook.com/luffphoto" className="socialLink"><IconFacebook />@luffphoto on FACEBOOK</a></span>
+              <a href="#" className="socialLink">@luffphoto on facebook</a>
             </div>
             <div>
-             <a href="mailto:tabbitha@example.com" className="socialLink">tabbicatm@luffphoto.com</a>
+             <a href="mailto:tabbitha@example.com" className="socialLink">connect@luffphoto.com on email</a>
             </div>
           </div>
         </section>
@@ -99,7 +101,9 @@ export default function Home({ photos = [], errors = [] }) {
       )}
 
       <footer className="footer">
-        <div className="footerLeft">luffphoto.com</div>
+        <div className="footerLeft">
+          <span><IconWhois /> luffphoto.com</span>
+        </div>
         <div className="footerRight">Luff Photo © 2026</div>
       </footer>
     </div>
