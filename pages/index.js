@@ -35,15 +35,15 @@ export default function Home({ photos = [], errors = [] }) {
       <header className="header">
         <div className="titleWrap">
           <h1 className="title small-caps">Luff Photography</h1>
-          <h2 className="sectionTitle">Tabbitha Snaps</h2>
+          <h2 className="sectionTitle">Tabbitha Snaps - @tabbicatm</h2>
         </div>
-        <p className="bio">Short paragraph — a concise artist statement about style and philosophy. Stylized, considered imagery that emphasizes form, texture and emotion.</p>
+        <p className="bio">When I shoot it's one shot. concise artist statement about style and philosophy. Stylized, considered imagery that emphasizes form, texture and emotion.</p>
       </header>
 
       <main className="container">
         <section className="carouselSection">
           <div className="carouselHead">
-            <h2 className="sectionTitle">Photos</h2>
+            <h2 className="sectionTitle">Seens and Scenes of the Week</h2>
             <div className="navButtons">
               <button aria-label="Previous" className="nav" onClick={scrollPrev}>‹</button>
               <button aria-label="Next" className="nav" onClick={scrollNext}>›</button>
@@ -68,12 +68,18 @@ export default function Home({ photos = [], errors = [] }) {
         </section>
 
         <section className="connect">
-          <h3>Connect with me</h3>
+          <h3>Creative Connections</h3>
           <p className="muted">Follow and reach out</p>
           <div className="social">
-            <a href="#" className="socialLink">Instagram</a>
-            <a href="#" className="socialLink">Behance</a>
-            <a href="mailto:tabbitha@example.com" className="socialLink">Email</a>
+            <div>
+              <a href="#" className="socialLink">@tabbicat instagram</a>
+            </div>
+            <div>
+              <a href="#" className="socialLink">@tabbicat on facebook</a>
+            </div>
+            <div>
+             <a href="mailto:tabbitha@example.com" className="socialLink">tabbicatm@luffphoto.com</a>
+            </div>
           </div>
         </section>
       </main>
