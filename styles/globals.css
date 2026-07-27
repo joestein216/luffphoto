@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Inter:wght@300;400;600&display=swap');
+9@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Inter:wght@300;400;600&display=swap');
 
 :root{
   --bg:#060607;
@@ -62,7 +62,7 @@ body{
 }
 
 .connect{margin-top:36px;display:flex;flex-direction:column;gap:8px}
-.social{display:flex;gap:12px;margin-top:8px}
+.social{display:flex;gap:12px;margin-top:8px;font-family:Josefin Sans';font-weight:300;font-size:20px;margin:0}
 .socialLink{color:var(--text);text-decoration:none;border-bottom:1px solid rgba(255,255,255,0.03);padding-bottom:2px}
 
 .errorPanel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:8px;color:var(--muted)}
