@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react'
+⁹import { useState, useRef, useEffect } from 'react'
 
 export default function Home({ photos = [], errors = [] }) {
   const [modal, setModal] = useState({ open: false, src: '', name: '' })
@@ -70,7 +70,7 @@ export default function Home({ photos = [], errors = [] }) {
         </section>
 
         <section className="connect">
-          <h2 className="sectionTitle">Creative Connections</h3>
+          <h2 className="sectionTitle">Creative Connections</h2>
           <div className="social">
             <div>
               <a href="#" className="socialLink">@tabbicat on instagram</a>
@@ -96,7 +96,7 @@ export default function Home({ photos = [], errors = [] }) {
       )}
 
       <footer className="footer">
-        <div className="footerLeft">Artistic portraiture &nbsp;—&nbsp; stylized</div>
+        <div className="footerLeft">luffphoto.com</div>
         <div className="footerRight">Luff Photo © 2026</div>
       </footer>
     </div>
