@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
-import { IconInstagram } from './icon_instagram.svg'
-import { IconFacebook } from './icon_facebook.svg'
-import { IconEmail } from './icon_email.svg'
-import { IconWhois } from './icon_whois.svg'
+import { IconInstagram } from './assets/icons/instagram.svg'
+import { IconFacebook } from './assets/icons/facebook.svg'
+import { IconEmail } from './assets/icons/mail.svg'
+import { IconWhois } from './assets/icons/whois.svg'
 
 export default function Home({ photos = [], errors = [] }) {
   const [modal, setModal] = useState({ open: false, src: '', name: '' })
