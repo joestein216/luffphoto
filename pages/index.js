@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from 'react'
-import { IconInstagram } from '/assets/icons/instagram.svg'
-import { IconFacebook } from '/assets/icons/facebook.svg'
-import { IconEmail } from '/assets/icons/mail.svg'
-import { IconWhois } from '/assets/icons/whois.svg'
+import { IconInstagram } from '@assets/icons/instagram.svg'
+import { IconFacebook } from '@assets/icons/facebook.svg'
+import { IconEmail } from '@assets/icons/email.svg'
+import { IconWhois } from '@assets/icons/whois.svg'
 
 export default function Home({ photos = [], errors = [] }) {
   const [modal, setModal] = useState({ open: false, src: '', name: '' })
@@ -84,7 +84,7 @@ export default function Home({ photos = [], errors = [] }) {
               <a href="#" className="socialLink">@luffphoto on facebook</a>
             </div>
             <div>
-             <a href="mailto:tabbitha@example.com" className="socialLink">connect@luffphoto.com on email</a>
+             <a href="mailto:tabbitha@example.com" className="socialLink"><IconEmail /> connect@luffphoto.com on email</a>
             </div>
           </div>
         </section>
