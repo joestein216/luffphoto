@@ -69,7 +69,6 @@ export default function Home({ photos = [], errors = [] }) {
 
         <section className="connect">
           <h3>Creative Connections</h3>
-          <p className="muted">Follow and reach out</p>
           <div className="social">
             <div>
               <a href="#" className="socialLink">@tabbicat instagram</a>
