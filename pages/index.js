@@ -35,7 +35,7 @@ export default function Home({ photos = [], errors = [] }) {
       <header className="header">
         <div className="titleWrap">
           <h1 className="title small-caps">Luff Photography</h1>
-          <div className="artist">Tabbitha Snaps</div>
+          <h2 className="sectionTitle">Tabbitha Snaps</h2>
         </div>
         <p className="bio">Short paragraph — a concise artist statement about style and philosophy. Stylized, considered imagery that emphasizes form, texture and emotion.</p>
       </header>
