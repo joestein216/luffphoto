@@ -19,7 +19,7 @@ const nextConfig = {
         {
           test: /\.svg$/i,
           issuer: /\.[jt]sx?$/,
-          resourceQuery: { not: [/url/] }, // exclude if you explicitly want a URL string
+          resourceQuery: { not: /url/ }, // exclude if you explicitly want a URL string
           use: ['@svgr/webpack'],
         },
       )
