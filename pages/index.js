@@ -102,7 +102,7 @@ export default function Home({ photos = [], errors = [] }) {
 
       <footer className="footer">
         <div className="footerLeft">
-          <span><IconWhois /> luffphoto.com</span>
+          <span>luffphoto.com</span>
         </div>
         <div className="footerRight">Luff Photo © 2026</div>
       </footer>
