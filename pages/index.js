@@ -39,7 +39,7 @@ export default function Home({ photos = [], errors = [] }) {
       <header className="header">
         <div className="titleWrap">
           <h1 className="title small-caps">Luff Photography</h1>
-          <h2 className="sectionTitle">Tabbitha Snaps</h2>
+          <h2 className="sectionTitle">Tabitha Mathys</h2>
         </div>
         <div className="bio">
           When I shoot it's one shot. concise artist statement about style and philosophy. Stylized, considered imagery that emphasizes form, texture and emotion.
