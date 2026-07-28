@@ -77,14 +77,7 @@ export default function Home({ photos = [], errors = [] }) {
           <h2 className="sectionTitle">Creative Connections</h2>
           <div className="social">
             <div>
-              <span><a href="https://www.instagram.com/luffphoto" className="socialLink">@luffphoto on instagram</a></span>
-            </div>
-            <div>
-              <span><a href="https://www..facebook.com/luffphoto" className="socialLink">@luffphoto on FACEBOOK</a></span>
-              <a href="#" className="socialLink">@luffphoto on facebook</a>
-            </div>
-            <div>
-             <a href="mailto:tabbitha@example.com" className="socialLink">connect@luffphoto.com on email</a>
+             <a href="mailto:connect@luffphoto.com" className="socialLink">connect@luffphoto.com on email</a>
             </div>
           </div>
         </section>
