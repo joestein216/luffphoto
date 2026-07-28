@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 //import { IconInstagram } from '@assets/icons/instagram.svg'
 //import { IconFacebook } from '@assets/icons/facebook.svg'
-//import { IconEmail } from '@assets/icons/email.svg'
+import { IconEmail } from '@assets/icons/email.svg'
 //import { IconWhois } from '@assets/icons/whois.svg'
 
 export default function Home({ photos = [], errors = [] }) {
@@ -77,7 +77,7 @@ export default function Home({ photos = [], errors = [] }) {
           <h2 className="sectionTitle">Creative Connections</h2>
           <div className="social">
             <div>
-             <a href="mailto:connect@luffphoto.com" className="socialLink">connect@luffphoto.com on email</a>
+             <a href="mailto:connect@luffphoto.com" className="socialLink"><IconEmail /> connect@luffphoto.com on email</a>
             </div>
           </div>
         </section>
