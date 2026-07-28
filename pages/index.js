@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react'
-import { IconInstagram } from '@assets/icons/instagram.svg'
+//import { IconInstagram } from '@assets/icons/instagram.svg'
 //import { IconFacebook } from '@assets/icons/facebook.svg'
 //import { IconEmail } from '@assets/icons/email.svg'
 //import { IconWhois } from '@assets/icons/whois.svg'
