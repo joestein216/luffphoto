@@ -1,8 +1,13 @@
 import { useState, useRef, useEffect } from 'react'
-import { instagram } from '@assets/icons/instagram.svg'
-import { facebook } from '@assets/icons/facebook.svg'
-import { email } from '@assets/icons/email.svg'
-import { whois } from '@assets/icons/whois.svg'
+import instagram from '@assets/icons/instagram.svg'
+import facebook from '@assets/icons/facebook.svg'
+import email from '@assets/icons/email.svg'
+import whois from '@assets/icons/whois.svg'
+
+const Instagram =  instagram;
+const Facebook =  facebook;
+const Email =  email;
+const Whois =  whois;
 
 export default function Home({ photos = [], errors = [] }) {
   const [modal, setModal] = useState({ open: false, src: '', name: '' })
@@ -75,12 +80,21 @@ export default function Home({ photos = [], errors = [] }) {
 
         <section className="connect">
           <h2 className="sectionTitle">Creative Connections</h2>
-          <div className="social'
+          <div className="social">
             <div>
-             <a href="mailto:connect@luffphoto.com" className="socialLink"><Email /> connect@luffphoto.com on email</a>
+             <a href="https://www.instagram.com/luffphoto" className="socialLink"><Instagram width={24} height={24} /> @luffphoto on Instagram</a>
+            </div>
+            <div>
+             <a href="https://www.facebook.com/luffphoto" className="socialLink"><Facebook width={24} height={24} /> @luffphoto on Facebook</a>
+            </div>
+            <div>
+             <a href="mailto:connect@luffphoto.com" className="socialLink"><Email width={24} height={24} /> connect@luffphoto.com on email</a>
+            </div>
+            <div>
+             <a href="https://www.luffphoto.com" className="socialLink"><Whois width={24} height={24} /> wwww.luffphoto.com</a>
             </div>
           </div>
-        </section>
+       </section>
       </main>
 
       {modal.open && (
