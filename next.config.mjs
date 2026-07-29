@@ -1,28 +1,22 @@
-// next.config.js
+// next.config.mjs
 const nextConfig = {
   webpack(config) {
-    // Find the default SVG loader and exclude it
+    // Find the existing file loader that handles images and exclude .svg from it
     const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.('.svg'),
+      rule.test && rule.test.test && rule.test.test('.svg')
     );
 
-    config.module.rules.push(
-      // Apply asset loader for ?url imports
-      {
-        ...fileLoaderRule,
-        test: /\.svg$/i,
-        resourceQuery: /url/,
-      },
-      // Use SVGR for other SVG imports
-      {
-        test: /\.svg$/i,
-        issuer: fileLoaderRule.issuer,
-        resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] },
-        use: ['@svgr/webpack'],
-      },
-    );
+    if (fileLoaderRule) {
+      fileLoaderRule.exclude = /\.svg$/i;
+    }
 
-    fileLoaderRule.exclude = /\.svg$/i;
+    // Use @svgr/webpack for SVGs imported from JS/TS
+    config.module.rules.push({
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
+      use: ['@svgr/webpack'],
+    });
+
     return config;
   },
 };
