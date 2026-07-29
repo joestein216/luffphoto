@@ -77,7 +77,7 @@ export default function Home({ photos = [], errors = [] }) {
           <h2 className="sectionTitle">Creative Connections</h2>
           <div className="social">
             <div>
-             <a href="mailto:connect@luffphoto.com" className="socialLink"><IconEmail /> connect@luffphoto.com on email</a>
+             <a href="mailto:connect@luffphoto.com" className="socialLink"><IEmail /> connect@luffphoto.com on email</a>
             </div>
           </div>
         </section>
