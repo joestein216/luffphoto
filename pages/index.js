@@ -47,7 +47,7 @@ export default function Home({ photos = [], errors = [] }) {
           <h2 className="sectionTitle">Tabitha Mathys</h2>
         </div>
         <div className="bio">
-          When I shoot it's one shot. concise artist statement about style and philosophy. Stylized, considered imagery that emphasizes form, texture and emotion.
+          it's all about perspective.
         </div>
       </header>
 
