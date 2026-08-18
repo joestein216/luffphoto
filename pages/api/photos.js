@@ -32,7 +32,6 @@ export default async function handler(req, res) {
 
     for (const f of jpgFiles) {
       const fileLink = await dbx.filesGetTemporaryLink({ path: f.path_display })
-      console.log(fileLink)
 
       photos.push({ id: fileLink.result.metadata.id, name: fileLink.result.metadata.name, link: fileLink.result.link, client_modified: fileLink.result.metadata.client_modified, size: fileLink.result.metadata.size })
    }
